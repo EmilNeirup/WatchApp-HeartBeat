@@ -19,6 +19,7 @@
 		3C730232261E097000FEA925 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C730231261E097000FEA925 /* ComplicationController.swift */; };
 		3C730234261E097100FEA925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C730233261E097100FEA925 /* Assets.xcassets */; };
 		3C730237261E097100FEA925 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C730236261E097100FEA925 /* Preview Assets.xcassets */; };
+		3C8D2A69261F948C00614519 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8D2A68261F948C00614519 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		3C730236261E097100FEA925 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C730238261E097100FEA925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C730239261E097100FEA925 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3C8D2A66261F948C00614519 /* Watch2 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch2 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		3C8D2A68261F948C00614519 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C8D2A69261F948C00614519 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 				3C730217261E096F00FEA925 /* Watch2 WatchKit App */,
 				3C730226261E097000FEA925 /* Watch2 WatchKit Extension */,
 				3C730210261E096F00FEA925 /* Products */,
+				3C8D2A67261F948C00614519 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +130,7 @@
 		3C730226261E097000FEA925 /* Watch2 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3C8D2A66261F948C00614519 /* Watch2 WatchKit Extension.entitlements */,
 				3C730227261E097000FEA925 /* HostingController.swift */,
 				3C730229261E097000FEA925 /* ContentView.swift */,
 				3C73022B261E097000FEA925 /* ExtensionDelegate.swift */,
@@ -145,6 +151,14 @@
 				3C730236261E097100FEA925 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C8D2A67261F948C00614519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C8D2A68261F948C00614519 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Watch2 WatchKit Extension/Watch2 WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Watch2 WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = JYFX5HGRLC;
@@ -452,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Watch2 WatchKit Extension/Watch2 WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Watch2 WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = JYFX5HGRLC;
